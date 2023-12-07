@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .home {
+        height: 100vh;
+        width: 100%;
+        color: whitesmoke;
+        /* background-image: linear-gradient(whitesmoke, aqua, grey); */
+        background-image: url(daredevil-bg.gif);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      h1 {
+        line-height: 40px;
+        font-size: 50px;
+        font-family: "Times New Roman", Times, serif;
+        animation: name 1s ease-out;
+      }
+      @keyframes name {
+        from {
+          transform: translate(-600px);
+          opacity: 0;
+
+          to {
+            transform: translate(0);
+            opacity: 1;
+          }
+        }
+      }
+
+      .home p {
+        /* line-height: 40px; */
+        font-size: 40px;
+        font-family: "Times New Roman", Times, serif;
+        animation: Softdev 2s ease-in-out 1;
+      }
+      @keyframes Softdev {
+        from {
+          transform: translate(600px);
+          opacity: 0;
+        }
+        to {
+          transform: translate(0);
+          opacity: 1;
+        }
+      }
+      button {
+        height: 50px;
+        width: 200px;
+        background-color: transparent;
+        border: solid;
+        color: whitesmoke;
+        font-size: 20px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-decoration: none;
+      }
+
+      button:hover {
+        animation: button 0.5s ease 1;
+      }
+      @keyframes button {
+        0%,
+        100% {
+          scale: 1;
+        }
+        50% {
+          scale: 1.2;
+        }
+      }
+
+      .home2 {
+        height: 100vh;
+        width: 100%;
+        margin-bottom: -500px;
+        background-image:url(dd\ bg2.jpg);
+        background-position-y:-280px;
+        background-position-x: 0px;
+        background-size: cover;
+      }
+
+      .skill-wrapper {
+        height: fit-content;
+        width: fit-content;
+        background-color: grey;
+        color: white;
+      }
+      .skill-col1 {
+        height: 300px;
+        width: 200px;
+        background-color: tomato;
+      }
+      .primary-para {
+        font-size: 25px;
+
+        /* font-family: "Times New Roman", Times, serif; */
+      }
+      nav a{
+        font-size: 30px;
+        color: whitesmoke;
+        font-family: 'Times New Roman', Times, serif;
+        text-decoration: none;
+        animation: nav1 0.8s ease-in 1;
+
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      nav a:hover{
+        color: steelblue;
+      }
+      nav a:nth-child(2){
+        color: steelblue;
+      }
+      nav{
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        /* justify-content: space-around; */
+        margin-left: 20px;
+        z-index: 1000;
+      }
+      .about img{
+        width: 500px;
+        height: 500px;
+        position: relative;
+        bottom: -100px;
+        right: 10px;
+        filter: drop-shadow(5px 5px 2px grey);
+      }
+      .about{
+        width: 600px;
+        color: wheat;
+        text-align:center;
+        position: relative;
+        left: 100px;
+        bottom: 150px;
+      }
+      /* skill starts */
+      .skill-container {
+        height: 500px;
+        width: 450px;
+        /* border: solid; */
+        position: relative;
+        /* top: -580px; */
+        left: 900px;
+        /* align-items: center; */
+        justify-content: center;
+        display: flex;
+      }
+
+      .para-skill {
+        font-size: 30px;
+        color:saddlebrown;
+        /* margin-left: 100px; */
+        position: relative;
+        left: 40px;
+
+        animation: h1 0.8s ease-in 1;
+      }
+
+      .skill-img-container {
+        /* display: flex; */
+        animation: skill 0.7s ease 1;
+
+      }
+
+      @keyframes skill {
+        from {
+          scale: 0.5;
+        }
+        to {
+          scale: 1;
+          /* opacity: .5; */
+        }
+      }
+      .py {
+        height: 100px;
+        width: 100px;
+        /* border: solid; */
+        position: relative;
+        top: 60px;
+        right: 40px;
+        /* animation: skill1 0.7s ease 1; */
+        /* background-color: aqua; */
+      }
+
+      .sql {
+        height: 100px;
+        width: 100px;
+        /* border: solid; */
+        position: relative;
+        top: 8px;
+        left: 80px;
+        /* animation: skill1 0.7s ease 1; */
+      }
+
+      .web {
+        height: 100px;
+        width: 100px;
+        /* border: solid; */
+        position: relative;
+        top: -3px;
+        /* left: 30px; */
+        right: 40px;
+        /* animation: skill1 0.7s ease 1; */
+      }
+
+      .java {
+        height: 100px;
+        width: 100px;
+        /* border: solid; */
+        position: relative;
+        top: -230px;
+        left: 80px;
+        /* animation: skill1 0.7s ease 1; */
+      }
+
+      .css {
+        height: 100px;
+        width: 100px;
+        /* border: solid; */
+        position: relative;
+        top: 35px;
+        /* left: 30px; */
+        right: 40px;
+        /* animation: skill1 0.7s ease 1; */
+      }
+
+      .c {
+        height: 100px;
+        width: 100px;
+        /* border: solid; */
+        position: relative;
+        top: -130px;
+        left: -160px;
+        /* animation: skill1 0.7s ease 1; */
+      }
+
+      .vb {
+        height: 100px;
+        width: 100px;
+        /* border: solid; */
+        position: relative;
+        top: -492px;
+        left: -160px;
+        /* animation: skill1 0.7s ease 1; */
+      }
+
+      .py:hover {
+        animation: skill1 0.3s ease;
+      }
+      .sql:hover {
+        animation: skill1 0.3s ease;
+      }
+      .c:hover {
+        animation: skill1 0.3s ease;
+      }
+      .java:hover {
+        animation: skill1 0.3s ease;
+      }
+      .web:hover {
+        animation: skill1 0.3s ease;
+      }
+      .css:hover {
+        animation: skill1 0.3s ease;
+      }
+      .vb:hover {
+        animation: skill1 0.3s ease;
+      }
+
+      @keyframes skill1 {
+        from {
+          scale: 1;
+        }
+        to {
+          scale: 1.2;
+          /* opacity: .5; */
+        }
+      }
+
+      /* skills ends  */
+
+      /* project starts */
+      .project1{
+        height: 100vh;
+        /* margin-top: -500px; */
+        width: 100%;
+        display: flex;
+        background-image: linear-gradient(black,red );
+      }
+      .p1{
+        height: 400px;
+        margin-top: 120px;
+        width: 70%;
+        /* margin-right: 300px; */
+        margin-left: -260px;
+        border: rgb(243, 233, 233) solid;}
+  
+      .project2{
+        height: 100vh;
+        /* margin-top:-500px; */
+        width: 100%;
+        display: flex;
+        background-image: linear-gradient(red,black );
+      }
+        .p2{
+        height: 400px;
+        margin-top: 50px;
+        width: 70%;
+        margin-right: 30px;
+        border: rgb(243, 233, 233) solid;
+
+      }
+      .project3{
+        height: 100vh;
+        margin-top:0px;
+        width: 100%;
+        display: flex;
+        background-image: linear-gradient(black,red );
+      }
+      .p3{
+        height: 400px;
+        margin-top: 50px;
+        width: 70%;
+        margin-right: 30px;
+        border: rgb(243, 233, 233) solid;
+      }
+      .project4{ height: 100vh;
+        margin-top:0px;
+        width: 100%;
+        display: flex;
+        background-image: linear-gradient(red,black );
+
+      }
+      .p4{
+        height: 400px;
+        margin-top: 100px;
+        width: 70%;
+        border: rgb(243, 233, 233) solid;
+      }
+      .ff-para{
+        height: 400px;
+        width: 600px;
+        margin-top:200px;
+         width: 60%;
+        /* border: solid; */
+      }
+      .fk-ss{
+        height: 400px;
+        width: 600px;
+        margin-top: 200px;
+         width: 60%;
+        /* border: solid; */
+      }
+      .an-ss{
+        height: 400px;
+        width: 600px;
+        margin-top: 200px;
+         width: 60%;
+        /* border: solid; */
+      }
+      .pf-para{
+        height: 400px;
+        width: 600px;
+        margin-top: 200px;
+         width: 60%;
+        /* border: solid; */
+      }
+      .contact1{
+        height: 100vh;
+        width: 100%;
+        background-image:linear-gradient(black,red);
+      }
+      .contact{
+        height: 530px;
+        width: 530px;
+        background-image:radial-gradient(black,red);
+        color: white;
+        border: white solid;
+        border-radius: 20px;
+        padding-top: 100px;
+        /* border-style: hidden; */
+        /* margin-right: 500px; */
+      }
+      .contact input{
+        height: 30px;
+        width: 200px;
+        display: block;
+        row-gap: 5px;
+        background-color: transparent;
+      }
+
+      /* .project1 {
+        margin-top: 20px;
+      } */
+      /* home3 endss */
+    </style>
+  </head>
+  <body>
+    <div class="main">
+        <div class="home">
+      <h1>
+        Hello, I'm <span><strong>Muhammad Abeed</strong></span>
+      </h1>
+      <p>Software Developer</p>
+      <a href="#about"
+        ><button>
+          Explore now
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-down-circle"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293z"
+            />
+          </svg></button
+      ></a>
+        </div>
+    <div class="home2">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About me</a>
+            <a href="#skill">Skills</a>
+            <a href="#project">Projects</a>
+            <a href="res.docx">Resume</a>
+        </nav>
+        <div class="about" id="about">
+            <img
+        src="my-pic-removebg-preview.png"
+        alt=""/>
+      <p class="primary-para" >
+        Solution-oriented and problem solver. Experience building and maintaining software and software architecture. Highly skilled in communication,
+        Dynamic Bachelor Computer Science graduate, skilled in Python, Web technology. collaboration, and technical documentation. To obtain a challenging position as a software developer where I can utilize my skills and experience to develop efficient and innovative software solutions.
+      </p>
+        </div>
+      
+    </div>
+    <!-- skill starts  -->
+    <div class="skill-container" id="skill">
+        <p class="para-skill"><strong>Skills</strong></p>
+        <div class="skill-img-container">
+          <div class="py">
+            <a
+              href="file:///C:/Users/HARSHA/Desktop/Web%20Tech/HTML/PROJECT/Portfolio/py.html"
+              target="_blank"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYQXgks-BG59lC7s4M_G3s0Hv79oILhtaotCMzGmlf4APe3tX3pB_hIhX9YKpR_ULtMvY&usqp=CAU"
+                alt=""
+                height="100px"
+                width="100px"
+            /></a>
+            <p align="center" style="font-size: 20px; color: rgb(246, 249, 240)">
+              Python
+            </p>
+          </div>
+          <div class="sql">
+            <a
+              href="file:///C:/Users/HARSHA/Desktop/Web%20Tech/HTML/PROJECT/Portfolio/sql.html"
+              target="_blank"
+              ><img
+                src="https://miro.medium.com/v2/resize:fit:1200/1*RK50G3R8xeRtANWAkJE6Mw.png"
+                alt=""
+                height="100px"
+                width="100px"
+            /></a>
+            <p align="center" style="font-size: 20px; color: rgb(252, 252, 251)">
+              SQL
+            </p>
+          </div>
+          <div class="web">
+            <a
+              href="file:///C:/Users/HARSHA/Desktop/Web%20Tech/HTML/PROJECT/Portfolio/html.html"
+              target="_blank"
+              ><img
+                src="https://static.wikia.nocookie.net/coding-help/images/0/02/174854.png/revision/latest?cb=20210514134203"
+                alt=""
+                height="100px"
+                width="100px"
+            /></a>
+            <p align="center" style="font-size: 20px; color: rgb(243, 245, 240)">
+              HTML
+            </p>
+          </div>
+          <div class="css">
+            <a
+              href="file:///C:/Users/HARSHA/Desktop/Web%20Tech/HTML/PROJECT/Portfolio/css.html"
+              target="_blank"
+              ><img
+                src="https://diziglobalsolution.com/wp-content/uploads/2023/04/logo-css-3-1536.png"
+                alt=""
+                height="100px"
+                width="100px"
+            /></a>
+            <p align="center" style="font-size: 20px; color: rgb(245, 245, 243)">
+              CSS
+            </p>
+          </div>
+          <div class="c">
+            <a
+              href="file:///C:/Users/HARSHA/Desktop/Web%20Tech/HTML/PROJECT/Portfolio/c.html"
+              target="_blank"
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/1853px-C_Programming_Language.svg.png"
+                alt=""
+                height="100px"
+                width="100px"
+            /></a>
+            <p align="center" style="font-size: 20px; color: rgb(249, 250, 246)">
+              C
+            </p>
+          </div>
+          <div class="java">
+            <a
+              href="file:///C:/Users/HARSHA/Desktop/Web%20Tech/HTML/PROJECT/Portfolio/java.html"
+              target="_blank"
+              ><img
+                src="https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg"
+                alt=""
+                height="100px"
+                width="100px"
+            /></a>
+            <p align="center" style="font-size: 20px; color: rgb(244, 246, 241)">
+              Java
+            </p>
+          </div>
+          <div class="vb">
+            <a
+              href="file:///C:/Users/HARSHA/Desktop/Web%20Tech/HTML/PROJECT/Portfolio/vb.html"
+              target="_blank"
+              ><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKQD58SqUZUYraIQpmuS-Qf98AHKz_vejeWKol0iUeNkuctdPcb4ecWkjnqMUZavjX7tc&usqp=CAU"
+                alt=""
+                height="100px"
+                width="100px"
+            /></a>
+            <p align="center" style="font-size: 20px; color: rgb(234, 236, 230)">
+              VB
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- skill ends  -->
+      <div class="project1" id="project">
+        <h1 style="font-size: 50px; color: white; text-shadow: 2px 2px 2px gray;">PROJECTS</h1>
+        <div class="p1"><h2 style="color: white; text-align: center;">Flipkart Clone</h2>
+        <hr><img src="flipkart_ss.png" alt="" style="height: 365px; width: 100%;">
+        
+        </div>
+        <div class="fk-ss"><p style="font-size: 25px; text-align: justify; color: white;">Developed a professional Flipkart Clone webpage using HTML and CSS to showcase my skills and experience.
+          And Utilized modern design principles and responsive design to create an engaging and user-friendly interface..</p><center><a href=" https://muhammad1abeed.github.io/flipkart_clone/"><input type="submit" value="Veiw app" style="height: 40px; width: 100px;"></a>
+            <a href="https://github.com/muhammad1abeed/flipkart_clone/blob/main/index.html"><input type="submit" value="Source Code" style="height: 40px; width: 100px;"></a></center>
+       </div>
+      </div>
+      <div class="project2">
+        <div class="p2"><h2 style="color: white; text-align: center;">AstroNova</h2>
+          <hr>
+        <img src="astronova_ss.png" alt="" style="height: 365px; width: 100%;">
+        </div>
+        <div class="an-ss">
+          <p style="font-size: 25px; text-align: justify; color: white;">Developed a professional AstroNova space related services webpage using HTML and CSS to showcase my skills and experience.
+          And Utilized modern design principles and responsive design to create an engaging and user-friendly interface.</p><center><a href=" https://muhammad1abeed.github.io/AstroNova/"><input type="submit" value="Veiw app" style="height: 40px; width: 100px;"></a>
+           <a href="https://github.com/muhammad1abeed/AstroNova/blob/main/Astronova.html"> <input type="submit" value="Source Code" style="height: 40px; width: 100px;"></a></center>
+        </div>
+      </div>
+      <div class="project3">
+        <div class="p3">
+          <h2 style="color: white; text-align: center;">Portfolio Profile</h2>
+          <hr>
+          <img src="portfolio_ss.png" alt="" style="height: 365px; width: 100%;">
+        </div>
+        <div class="pf-para"><p style="font-size: 25px; text-align: justify; color: white;">Developed a professional Portfolio Profile webpage using HTML and CSS to showcase my skills and experience.
+          And Utilized modern design principles and responsive design to create an engaging and user-friendly interface.</p><center><input type="submit" value="Veiw app" style="height: 40px; width: 100px;">
+            <input type="submit" value="Source Code" style="height: 40px; width: 100px;"></center></div>
+      </div>
+      <div class="project4">
+        <div class="p4">
+          <h2 style="color: white; text-align: center;">Film_fetch</h2>
+          <hr>
+          <img src="Film ss.png" alt="" style="height: 365px; width: 100%;">
+        </div>
+        <div class="ff-para"><p style="font-size: 25px; text-align: justify; color: white;">Developed a professional Film_fetch which leads to give user a better experiencein streaming of movies,this webpage using HTML and CSS to showcase my skills and experience.
+          And Utilized modern design principles and responsive design to create an engaging and user-friendly interface.</p>
+        <center><input type="submit" value="Veiw app" style="height: 40px; width: 100px;">
+      <input type="submit" value="Source Code" style="height: 40px; width: 100px;"></center></div>
+
+          
+     
+</div>
+<center>
+<div class="contact1">
+  <div class="contact">
+    <form action="" >
+    <fieldset>
+    <legend><b style="font-size: 30px;">CONTACT</b></legend>
+    <label for="">Name:</label>
+    <input type="text" name="" id=""><br>
+    <label for="">Mobile no:</label>
+    <input type="text" name="" id=""><br>
+    <label for="">Gmail Address</label>
+    <input type="text" name="" id="">
+    <!-- <label for="">Comments</label> -->
+    <textarea name="" id="" cols="30" rows="10" placeholder="Comments"></textarea>
+    <button type="button" style="height: 30px;
+    width: 130px;">submit</button>
+    </fieldset>
+    </form>
+  </center>
+    
+  </div>
+</div>
+
+</div>
+  </body>
+</html>
